@@ -4,6 +4,7 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
+      config.video = false;
       allureWriter(on, config);
       return config;
 
