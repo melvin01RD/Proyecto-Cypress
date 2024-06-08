@@ -24,13 +24,11 @@ export class loginElements {
        
     }
 
-    static login (username,password){
-        this.insertUsername(username) 
-        this.insertPassword(password)
-        this.clickOnloginBotton()
-    }
 }
 
+
+
+module.exports=loginElements;
 
 
 

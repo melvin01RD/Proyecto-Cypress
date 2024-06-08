@@ -1,29 +1,24 @@
-import { loginElements } from "./login.elements";
+import { loginElements } from './login.elements.js';
 
-export class loginMethods{
+export class LoginPage {
 
-    static  InsertUsername(username){
-
-        loginElements.textboxes.username.type(username)
-
-        
-
+    static insertUsername(username) {
+        loginElements.textboxes.username().type(username); // Usar el parámetro pasado a la función
     }
 
-    static InsertPassword(password){
-    loginElements.textboxes.password.type(password)
-
+    static insertPassword(password) {
+        loginElements.textboxes.password().type(password); // Usar el parámetro pasado a la función
     }
 
-      static clickOnLoginButton(){
+    static clickOnLoginButton() {
+        loginElements.buttons.login().click();
+    }
 
-        loginElements.buttons.login.click()
-
-
-
-     }
-
-
+    static login(username, password) {
+        this.insertUsername(username);
+        this.insertPassword(password);
+        this.clickOnLoginButton();
+    }
 }
 
 
