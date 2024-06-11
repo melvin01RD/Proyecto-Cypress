@@ -10,11 +10,14 @@ export class SignupElements {
         };
     }
 
-    static get close() {
-        return cy.get('div[id="logInModal"] button').eq(1);
-    }
-
-    static get loginButton() {
-        return cy.contains('button', 'Log in');
+    static get buttons() {
+        return {
+            get close() {
+                return cy.contains("button", "close").eq(1);
+            },
+            get signup() {
+                return cy.contains("button", "signup");
+            }
+        };
     }
 }

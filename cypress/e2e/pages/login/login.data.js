@@ -1,14 +1,10 @@
-export class loginData{
-
-    static get invalidCredentials(){
-        return{
+export class LoginData {
+    static get invalidCredentials() {
+        return {
             username: 'esmirna',
             password: 'calcano'
-        }
+        };
     }
-
 }
 
-
-
-export default LoginPage;
+export default LoginData;

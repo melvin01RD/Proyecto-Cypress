@@ -1,35 +1,24 @@
-export class loginElements {
+import LoginElements from './login.elements.js';
 
-    static get textboxes() {
-        return {
-            get username() {
-                return cy.get('input#loginusername'); 
-            },
-            get password() {
-                return cy.get('input#loginpassword'); 
-            }
-        };
+export class LoginPage {
+    static insertUsername(username) {
+        LoginElements.textboxes.username().type(username);
     }
 
-    static get buttons() {
-        return {
-            get close() {
-                return cy.get('div[id="logInModal"] button').eq(1); 
-            },
-            get login() { 
-                return cy.contains("button", "log in"); 
-            }
-        }
-
-       
+    static insertPassword(password) {
+        LoginElements.textboxes.password().type(password);
     }
 
+    static clickOnLoginButton() {
+        LoginElements.buttons.login().click();
+    }
+
+    static login(username, password) {
+        this.insertUsername(username);
+        this.insertPassword(password);
+        this.clickOnLoginButton();
+    }
 }
 
-
-
-module.exports=loginElements;
-
-
-
+export default LoginPage;
 

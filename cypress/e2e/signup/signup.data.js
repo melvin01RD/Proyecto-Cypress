@@ -1,31 +1,20 @@
-        export class signupData{
-
-            static get textboxes() {
-
-                return{
-                    get username(){
-                
-                        return cy.get('input#loginusername')
-                    },
-
-                    get password(){
-                        return cy.get('input#loginpassword')
-                    }
-
-
-                }
+export class SignupData {
+    static get textboxes() {
+        return {
+            get username() {
+                return cy.get('input#loginusername');
+            },
+            get password() {
+                return cy.get('input#loginpassword');
             }
+        };
+    }
 
-                static get close(){
+    static get close() {
+        return cy.get('div[id="logInModal"] button').eq(1);
+    }
 
-                return cy.get('div[id="logInModal"] button').eq(1)
-                }
-
-
-                static get loginButton(){
-                    return cy.contains('button', 'Log in')
-
-                }
-
-
-            }
+    static get loginButton() {
+        return cy.contains('button', 'Log in');
+    }
+}

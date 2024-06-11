@@ -1,29 +1,23 @@
+import SignupElements from "./signup.elements.js";
 
-import { SignupElements } from "./signup.elements";
+export class SignupMethods {
+    static InsertUsername(username) {
+        SignupElements.textboxes.username().invoke('val', username);
+    }
 
-
-export class SignupMethods{
-
-     static InsertUsername(username){
-        SignupElements.textboxes.username.invoke('val', username);
-     };
-
-
-     static InsertPassword(password){
-        SignupElements.textboxes.password.invoke('val', password);
-     };
+    static InsertPassword(password) {
+        SignupElements.textboxes.password().invoke('val', password);
+    }
       
-        static clickOnSignupButton(){
+    static clickOnSignupButton() {
+        SignupElements.buttons.signup().click();
+    }
 
-             SignupElements.buttons.Signup.click()
-   
-        };
-
-        static Signup(username,password){
-               this.InsertUsername(username);
-               this.InsertPassword(password);
-               this.clickOnSignupButton()
-
-        }
-
+    static Signup(username, password) {
+        this.InsertUsername(username);
+        this.InsertPassword(password);
+        this.clickOnSignupButton();
+    }
 }
+
+export default SignupMethods;
