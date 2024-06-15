@@ -1,4 +1,4 @@
-import LoginElements from './login.elements.js';
+import LoginElements from './login.elements';
 
 export class LoginPage {
     static insertUsername(username) {
