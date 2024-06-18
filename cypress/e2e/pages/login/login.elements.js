@@ -1,24 +1,13 @@
-import LoginElements from './login.elements.js';
+class LoginElements {
+    static textboxes = {
+        username: () => cy.get('#loginusername'),  // Selector para el campo de nombre de usuario
+        password: () => cy.get('#loginpassword')   // Selector para el campo de contraseña
+    };
 
-export class LoginPage {
-    static insertUsername(username) {
-        LoginElements.textboxes.username().type(username);
-    }
-
-    static insertPassword(password) {
-        LoginElements.textboxes.password().type(password);
-    }
-
-    static clickOnLoginButton() {
-        LoginElements.buttons.login().click();
-    }
-
-    static login(username, password) {
-        this.insertUsername(username);
-        this.insertPassword(password);
-        this.clickOnLoginButton();
-    }
+    static buttons = {
+        login: () => cy.get('button[onclick="logIn()"]')  // Selector para el botón de inicio de sesión
+    };
 }
 
-export default LoginPage;
+export default LoginElements;
 

@@ -1,8 +1,9 @@
-const { defineConfig } = require('cypress');
-const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+import allureWriter from '@shelex/cypress-allure-plugin/writer';
+import { defineConfig } from 'cypress';
 
-module.exports = defineConfig({
+export default defineConfig({
   retries: 1,
+  video: false,
   e2e: {
     setupNodeEvents(on, config) {
       config.video = false;
