@@ -1,4 +1,4 @@
-import allureWriter from '@shelex/cypress-allure-plugin/writer';
+import allureWriter from '@shelex/cypress-allure-plugin/writer.js';
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
@@ -9,8 +9,6 @@ export default defineConfig({
       config.video = false;
       allureWriter(on, config);
       return config;
-
     },
-    
   },
 });

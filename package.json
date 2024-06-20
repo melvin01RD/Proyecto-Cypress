@@ -3,23 +3,24 @@
   "version": "1.0.0",
   "description": "Proyecto basado en Cypress con POM, Parallel Testing, Test Report, CI/CD AWS",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
-    "ejecutar-pruebas":"npx cypress@12.13.0  run --headed --browser chrome",
+    "ejecutar-pruebas": "cypress run --headed --env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report --clean",
     "abrir-report": "allure open",
-    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte && npm run abrir-report"
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas &&  npm run abrir-report  && npm run generar-reporte"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.2",
     "cypress": "^13.10.0",
     "cypress-parallel": "^0.13.0",
     "rimraf": "^5.0.7"
   },
   "dependencies": {
-    "@shelex/cypress-allure-plugin": "^2.40.2",
     "allure-commandline": "^2.29.0",
     "express": "^4.19.2"
   }
