@@ -22,7 +22,7 @@ describe('navegar hasta la pagina demoblaze', () => {
     LoginPage.login(username, password)
     logger.verification(`home page should show "welcome ${username}"text`)
     cy.get('a#nameofuser').should('contain.text',username)
-    cy.wait(3000)
+    cy.wait(2000)
 
   })
 })

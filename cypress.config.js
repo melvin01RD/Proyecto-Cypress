@@ -11,4 +11,7 @@ export default defineConfig({
       return config;
     },
   },
+    
+  "chromeWebSecurity":false 
+    
 });

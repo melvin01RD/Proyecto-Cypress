@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
-    "ejecutar-pruebas": "cypress run --headed --env allure=true",
+    "ejecutar-pruebas": "npx cypress@12.13.0  run --headed --browser chrome --env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report --clean",
     "abrir-report": "allure open",
-    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas &&  npm run abrir-report  && npm run generar-reporte"
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas &&  npm run generar-reporte  && npm run abrir-report "
   },
   "keywords": [],
   "author": "",
@@ -25,3 +25,5 @@
     "express": "^4.19.2"
   }
 }
+
+

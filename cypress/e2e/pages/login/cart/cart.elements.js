@@ -8,7 +8,7 @@ export class CartElement{
         };
     }
 
-     ////td[text()="Sony xperia z5"]/ancestor::tr/
+     
     static get links(){
 
         return{

@@ -2,13 +2,13 @@ import SignupElements from "./signup.elements.js";
 
 export class SignupMethods {
     static InsertUsername(username) {
-        SignupElements.textboxes.username().invoke('val', username);
+        SignupElements.textboxes.username().type(username);
     }
 
     static InsertPassword(password) {
-        SignupElements.textboxes.password().invoke('val', password);
+        SignupElements.textboxes.password().type(password);
     }
-      
+
     static clickOnSignupButton() {
         SignupElements.buttons.signup().click();
     }
@@ -18,6 +18,7 @@ export class SignupMethods {
         this.InsertPassword(password);
         this.clickOnSignupButton();
     }
+
 }
 
 export default SignupMethods;

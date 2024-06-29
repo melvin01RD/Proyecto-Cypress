@@ -2,15 +2,15 @@ import SignupElements from "./signup.elements.js";
 
 export class SignupMethods {
     static InsertUsername(username) {
-        SignupElements.textboxes.username().invoke('val', username);
+        cy.get(SignupElements.textboxes.username()).type(username);
     }
 
     static InsertPassword(password) {
-        SignupElements.textboxes.password().invoke('val', password);
+        cy.get(SignupElements.textboxes.password()).type(password);
     }
       
     static clickOnSignupButton() {
-        SignupElements.buttons.signup().click();
+        cy.get(SignupElements.buttons.signup()).click();
     }
 
     static Signup(username, password) {
@@ -19,5 +19,3 @@ export class SignupMethods {
         this.clickOnSignupButton();
     }
 }
-
-export default SignupMethods;
