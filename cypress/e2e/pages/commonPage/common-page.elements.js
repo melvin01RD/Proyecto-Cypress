@@ -3,27 +3,22 @@ export class CommonPageElements {
         return {
             get home() {
                 return cy.get('li.active a');
+            },
+            get contact() {
+                return cy.get('a[data-target="#exampleModal"]');
+            },
+            get aboutUs() {
+                return cy.get('a[data-target="#videoModal"]');
+            },
+            get cart() {
+                return cy.contains('a', 'Cart');
+            },
+            get logIn() {
+                return cy.get('a[data-target="#logInModal"]');
+            },
+            get signUp() {
+                return cy.get('a[data-target="#signInModal"]');
             }
         };
-    }
-
-    static get contact() {
-        return cy.get('a[data-target="#exampleModal"]');
-    }
-
-    static get aboutUs() {
-        return cy.get('a[data-target="#videoModal"]');
-    }
-
-    static get cart() {
-        return cy.contains('a', 'Cart');
-    }
-
-    static get logIn() { 
-        return cy.get('a[data-target="#logInModal"]');
-    }
-
-    static get signUp() {
-        return cy.get('a[data-target="#signInModal"]');
     }
 }

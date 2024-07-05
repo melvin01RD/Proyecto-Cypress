@@ -1,4 +1,4 @@
-export class SignupElements {
+ export class SignupElements {
     static get textboxes() {
         return {
             get username() {
@@ -20,4 +20,7 @@ export class SignupElements {
             }
         };
     }
-}
+} 
+
+
+
