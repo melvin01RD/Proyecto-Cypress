@@ -39,7 +39,7 @@ export class CommonPageMethods{
         })
     }
      
-     static GenerateRandomUser(length=10) {
+     static GenerateRandomString(length=10) {
         let result = '';
         const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
         const charactersLength = characters.length;

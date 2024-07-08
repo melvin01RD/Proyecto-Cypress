@@ -3,15 +3,15 @@ import SignupElements from "./signup.elements.js";
 
 export class SignupMethods {
   static InsertUsername(username) {
-    cy.get(SignupElements.textboxes.username()).type(username);
+    cy.get(SignupElements.textboxes.username).type(username);
   }
 
   static InsertPassword(password) {
-    cy.get(SignupElements.textboxes.password()).type(password);
+    cy.get(SignupElements.textboxes.password).type(password);
   }
 
   static clickOnSignupButton() {
-    cy.get(SignupElements.buttons.signup()).click();
+    cy.get(SignupElements.buttons.signup).click();
   }
 
   static Signup(username, password) {
@@ -21,10 +21,13 @@ export class SignupMethods {
   }
 
   static verifySignUpSuccessful() {
-    CommonPageMethods.verifyAlert('signup successful'); // Corrected typo
+    CommonPageMethods.verifyAlert('Sign up successful');
   }
 
   static verifyThatUserAlreadyExists() {
-    CommonPageMethods.verifyAlert('This user already exists'); // Corrected typo
+    CommonPageMethods.verifyAlert('This user already exists');
   }
 }
+
+
+

@@ -1,7 +1,7 @@
 import { logger } from '../../utils/logger';
 import LoginElements from './login.elements';
 
-export class LoginPage {
+export class LoginMethods {
     static insertUsername(username) {
         LoginElements.textboxes.username().invoke('val',username);
     }
@@ -24,4 +24,4 @@ export class LoginPage {
     }
 }
 
-export default LoginPage;
+export default LoginMethods;
